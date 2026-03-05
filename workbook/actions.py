@@ -44,12 +44,11 @@ CATEGORY = ["연습 문제", "기본 문제✔", "기본 문제", "응용 문제
 
 # gen 0x00.md to 0x??.md, proper prob_id.py for each solution directory
 def gen_ind_workbook(attrs, category):
-    txt = '''# Authored by : nay0ng
-# Co-authored by : -
-# http://boj.kr/****************************
+    template_header = '''# Authored by : nayoung918
+# https://www.acmicpc.net/problem/{prob_id}
 import sys
 input = sys.stdin.readline
-}'''
+'''
     chapter_idx = 0
     for attr in attrs:
         if len(attr) < 3: # No workbook
@@ -65,6 +64,7 @@ input = sys.stdin.readline
             if prob_id in category[chapter_idx]:
                 category_idx = category[chapter_idx].index(prob_id)
             file_path = solution_path + prob_id
+            txt = template_header.format(prob_id=prob_id)
             if not os.path.exists(file_path + '.py'):
                 with open(file_path + '.py', 'w', encoding="UTF-8") as f:
                     f.write(txt)
