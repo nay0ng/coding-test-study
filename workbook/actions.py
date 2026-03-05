@@ -100,7 +100,7 @@ input = sys.stdin.readline
         category_idx = 0
         problem_infos = get_problem_info(attr[2])
         chapter_key = attr[0]
-        prob_table = '| 문제 분류 | 문제 | 문제 제목 | 풀이 코드 | 참고 코드 |\n| :--: | :--: | :--: | :--: | :--: |\n'
+        prob_table = '| 문제 분류 | 문제 | 문제 제목 | 내 풀이 코드 | 참고 코드 |\n| :--: | :--: | :--: | :--: | :--: |\n'
         for prob_id, prob_name in problem_infos:
             if prob_id in category[chapter_idx]:
                 category_idx = category[chapter_idx].index(prob_id)
@@ -120,7 +120,7 @@ input = sys.stdin.readline
                 prob_table += f'| {CATEGORY[category_idx]} | {prob_id} | [{prob_name}](https://www.acmicpc.net/problem/{prob_id}) | - | {ref_link} |\n'
             else:
                 solution_num += 1
-                code_attr = f'[정답 코드]({file_path.replace(" ", "%20")}.py)'
+                code_attr = f'[풀이 코드]({file_path.replace(" ", "%20")}.py)'
                 MAX_DIFFERENT_SOLUTION = 9
                 for i in range(1, MAX_DIFFERENT_SOLUTION+1):
                     if os.path.exists(file_path+'_'+str(i)+'.py'):
