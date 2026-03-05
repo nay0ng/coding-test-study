@@ -4,6 +4,8 @@
 
 강의 원본: [encrypted-def/basic-algo-lecture](https://github.com/encrypted-def/basic-algo-lecture)
 
+파이썬 풀이 참고: [hanXen/basic-algo-lecture-python](https://github.com/hanXen/basic-algo-lecture-python)
+
 ## 구조
 
 - `workbook/` : 문제집 자동화 스크립트 및 설정 파일
