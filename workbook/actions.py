@@ -99,6 +99,10 @@ input = sys.stdin.readline
         os.makedirs(solution_path, exist_ok=True)
         category_idx = 0
         problem_infos = get_problem_info(attr[2])
+        if not problem_infos:
+            pbars.append("")
+            chapter_idx += 1
+            continue
         chapter_key = attr[0]
         prob_table = '| 문제 분류 | 문제 | 문제 제목 | 내 풀이 코드 | 참고 코드 |\n| :--: | :--: | :--: | :--: | :--: |\n'
         for prob_id, prob_name in problem_infos:
