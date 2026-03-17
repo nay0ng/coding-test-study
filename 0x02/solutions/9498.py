@@ -3,11 +3,6 @@
 import sys
 input = sys.stdin.readline
 
-# Authored by : nayoung918
-# https://www.acmicpc.net/problem/9498
-import sys
-input = sys.stdin.readline
-
 n = int(input())
 
 if n > 89:

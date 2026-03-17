@@ -1,9 +1,9 @@
 # Authored by : nayoung918
 # https://www.acmicpc.net/problem/10171
-import sys
-input = sys.stdin.readline
+# import sys
+# input = sys.stdin.readline
 
-print(rf'''\    /\
+print(r'''\    /\
  )  ( ')
 (  /  )
  \(__)|''')

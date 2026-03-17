@@ -1,7 +1,7 @@
 # Authored by : nayoung918
 # https://www.acmicpc.net/problem/10871
 import sys
-input = sys.stdin.readline
+input = sys.stdin.readline().rstrip()
 
 n, x = map(int, input().split())
 num_list = list(map(int, input().split()))

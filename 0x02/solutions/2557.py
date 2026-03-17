@@ -1,6 +1,6 @@
 # Authored by : nayoung918
 # https://www.acmicpc.net/problem/2557
-import sys
-input = sys.stdin.readline
+# import sys
+# input = sys.stdin.readline
 
-print("Hello World!")
+print('Hello World!')
