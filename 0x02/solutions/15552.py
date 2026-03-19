@@ -6,4 +6,8 @@ input = lambda: sys.stdin.readline().rstrip()
 N = int(input())
 
 for _ in range(N):
-    print(sum(list(map(int, input().split()))))
+    # 불필요한 list()
+	# print(sum(list(map(int, input().split()))))
+
+	# 개선
+	print(sum(map(int, input().split())))  # sum()은 iterable 바로 받음
